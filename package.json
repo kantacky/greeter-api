@@ -2,7 +2,9 @@
   "name": "greeter-api",
   "version": "0.1.0",
   "scripts": {
-    "start": "ts-node index.ts",
+    "dev": "ts-node index.ts",
+    "start": "node index.js",
+    "build": "tsc",
     "openapi-generator": "openapi-generator-cli"
   },
   "devDependencies": {

@@ -1,7 +1,12 @@
 import express from "express";
 import * as OpenApiValidator from "express-openapi-validator";
 
-const port = 8000;
+let port: number;
+if (process.env.PORT) {
+  port = parseInt(process.env.PORT);
+} else {
+  port = 8080;
+}
 
 const app = express();
 
