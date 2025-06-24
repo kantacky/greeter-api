@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-app.get("/hello", (req: express.Request, res: express.Response) => {
+app.get("/hello", (req, res) => {
   res.send({
     message: `Hello, ${req.query.name}!`,
   });
