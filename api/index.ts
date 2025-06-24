@@ -1,5 +1,5 @@
 import express from "express";
-import * as OpenApiValidator from "express-openapi-validator";
+// import * as OpenApiValidator from "express-openapi-validator";
 
 let port: number;
 if (process.env.PORT) {
@@ -10,13 +10,13 @@ if (process.env.PORT) {
 
 const app = express();
 
-app.use(
-  OpenApiValidator.middleware({
-    apiSpec: "openapi/greeter.yaml",
-    validateRequests: true,
-    validateResponses: true,
-  })
-);
+// app.use(
+//   OpenApiValidator.middleware({
+//     apiSpec: "openapi/greeter.yaml",
+//     validateRequests: true,
+//     validateResponses: true,
+//   })
+// );
 
 app.get("/hello", (req, res) => {
   res.send({
