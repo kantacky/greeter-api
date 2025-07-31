@@ -19,9 +19,15 @@ const app = express();
 // );
 
 app.get("/hello", (req, res) => {
-  res.send({
-    message: `Hello, ${req.query.name}!`,
-  });
+  if (req.query.name) {
+    res.send({
+      message: `Hello, ${req.query.name}!`,
+    });
+  } else {
+    res.send({
+      message: "Who are you?",
+    });
+  }
 });
 
 app.listen(port, () => console.log(`Server ready on port ${port}.`));
